@@ -33,8 +33,8 @@
         master.commit("Last commit on base");
         const localMaster = gitgraph.branch("<#1> master (local)");
         localMaster.commit({
-            subject: "<uncommited changes>",
-            body: "Changes made to the local base during the workflow",
+            subject: "<uncommitted changes>",
+            body: "Changes to the local base during the workflow",
         })
         const remotePatch = gitgraph.branch("create-pull-request/patch");
         remotePatch.merge({
@@ -48,8 +48,8 @@
 
         const localMaster2 = gitgraph.branch("<#2> master (local)");
         localMaster2.commit({
-            subject: "<uncommited changes>",
-            body: "Changes made to the updated local base during the workflow",
+            subject: "<uncommitted changes>",
+            body: "Changes to the updated local base during the workflow",
         })
         remotePatch.merge({
             branch: localMaster2,
